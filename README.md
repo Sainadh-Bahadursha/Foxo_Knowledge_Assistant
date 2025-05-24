@@ -97,9 +97,7 @@ streamlit run app.py
 * No authentication or multi-user session tracking yet.
 * If more time:
   * Implement chat history export in PDF or JSON format for session review or reporting
-
   * Integrate food image-based calorie estimation using computer vision models for real-time nutrition insights
-
   * Replace the CSV-based agent with a BigQuery-powered SQL agent to handle large-scale fitness and health data more efficiently
 
 ---
