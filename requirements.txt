@@ -8,3 +8,4 @@ streamlit
 tavily-python
 requests
 python-dotenv
+pydantic
