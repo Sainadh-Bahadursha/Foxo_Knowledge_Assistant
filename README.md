@@ -120,5 +120,5 @@ streamlit run app.py
 │   ├── build_vectorstore.py            # Company runs this file to create local vector_store of all company documents
 │   ├── indexer.py                      # FAISS Indexer
 ├── data/                               # Store all of your company documents in this folder (PDFs, TXT, CSVs)
-├── requirements.txt
+├── requirements.txt                    # All the required libraries with specific versions
 ```
