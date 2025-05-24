@@ -1,0 +1,28 @@
+--- Community Support Log: FOXO Helpdesk ---
+
+[2024-11-04 10:15] User123:
+I'm unable to connect my Fitbit data to the FOXO dashboard. The sync just shows a loading spinner forever.
+
+[2024-11-04 10:18] SupportAgent1:
+Hi User123! We’re aware of an issue with Fitbit's new API keys. Please go to Settings > Connections and re-authenticate. Let us know if it persists.
+
+[2024-11-04 11:02] User456:
+How do I export my life expectancy report as a PDF?
+
+[2024-11-04 11:05] SupportAgent2:
+Go to the Summary tab and click “Export as PDF” at the top right. Make sure popups are enabled in your browser.
+
+[2024-11-04 12:10] User789:
+Can I compare my nutrition insights with someone in the same age group?
+
+[2024-11-04 12:15] SupportAgent1:
+Yes! Use the Compare tab. You can filter by age, gender, and health condition for side-by-side charts.
+
+[2024-11-04 14:20] User321:
+Will FOXO send me food recommendations based on the weather in my city?
+
+[2024-11-04 14:25] SupportAgent2:
+Absolutely! Our Weather-Food module recommends seasonal meals based on your region. Enable location access in Profile > Preferences.
+
+[2024-11-04 15:30] System Alert:
+Scheduled maintenance window on 2024-11-06 from 01:00 to 03:00 UTC. Some features may be temporarily unavailable.
