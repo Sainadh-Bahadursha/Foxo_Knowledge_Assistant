@@ -1,6 +1,8 @@
 langchain
 langchain-community
 langchain-openai
+langchain-core
+langchain-experimental
 openai
 faiss-cpu
 PyMuPDF
@@ -9,3 +11,5 @@ tavily-python
 requests
 python-dotenv
 pydantic
+pandas
+tabulate
