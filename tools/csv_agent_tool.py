@@ -7,7 +7,7 @@ class CSVAgentTool:
             llm=ChatOpenAI(model_name="gpt-4o", temperature=0),
             path=file_path,
             verbose=False,
-            allow_dangerous_code=True  # ✅ required for REPL-based CSV agent
+            allow_dangerous_code=True  
         )
 
     def ask(self, query: str) -> str:

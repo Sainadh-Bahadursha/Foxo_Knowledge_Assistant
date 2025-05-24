@@ -23,7 +23,7 @@ class FoodNutritionTool:
 
             output_lines.append(
                 f" *{name.title()}* ({grams}g): **{cal:.2f} kcal** "
-                f"({self.calories_per_100g[name]} kcal/100g)"
+                f"({self.calories_per_100g[name]} kcal/100g \n)"
             )
 
         output_lines.append(f"\n **Total Estimated Calories: {total_cal:.2f} kcal**")
