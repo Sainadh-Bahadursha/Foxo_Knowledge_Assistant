@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langchain-openai
+openai
+faiss-cpu
+PyMuPDF
+streamlit
+tavily-python
+requests
+python-dotenv
