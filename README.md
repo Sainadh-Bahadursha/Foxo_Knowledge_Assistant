@@ -10,6 +10,8 @@ app_file: app.py
 
 ## 🧠 FOXO Knowledge Assistant
 
+Check out my [Streamlit App](https://sainadh-foxo-agentic-chatbot.streamlit.app/)
+
 An intelligent, LangChain-powered assistant that answers user questions across **nutrition, fitness, mental wellness, weather-aware food recommendations, personal health tracking**, and **life expectancy estimation** — using internal documents, custom tools, and external search.
 
 Built with:
