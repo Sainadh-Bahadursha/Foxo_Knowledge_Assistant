@@ -78,16 +78,31 @@ This assistant combines:
 
 )
 # Ask for API keys
-openai_key = st.text_input("🔐 Enter your OpenAI API Key", type="password", help="Required for answering questions using AI")
-tavily_key = st.text_input("🌐 Enter your Tavily API Key", type="password", help="Used for web searches")
+# Step 1: Check if keys already stored in session
+if "api_keys_set" not in st.session_state:
+    st.session_state.api_keys_set = False
 
-if not openai_key or not tavily_key:
-    st.warning("Please enter both OpenAI and Tavily API keys to continue.")
+# Step 2: Show input form if not set
+if not st.session_state.api_keys_set:
+    with st.form("api_key_form"):
+        openai_key = st.text_input("Enter your OpenAI API Key", type="password", help="Required for answering questions using AI")
+        tavily_key = st.text_input("Enter your Tavily API Key", type="password", help="Used for web searches")
+        submitted = st.form_submit_button("🔓 Apply API Keys")
+
+    if submitted:
+        if not openai_key or not tavily_key:
+            st.error("Both API keys are required.")
+        else:
+            os.environ["OPENAI_API_KEY"] = openai_key
+            os.environ["TAVILY_API_KEY"] = tavily_key
+            st.session_state.api_keys_set = True
+            st.rerun()
     st.stop()
+else:
+    # Already set — apply to environment for tools to pick up
+    os.environ["OPENAI_API_KEY"] = os.environ.get("OPENAI_API_KEY", "")
+    os.environ["TAVILY_API_KEY"] = os.environ.get("TAVILY_API_KEY", "")
 
-# Save keys to environment
-os.environ["OPENAI_API_KEY"] = openai_key
-os.environ["TAVILY_API_KEY"] = tavily_key
 
 # Initialize agent and states
 if "foxo_agent" not in st.session_state:
