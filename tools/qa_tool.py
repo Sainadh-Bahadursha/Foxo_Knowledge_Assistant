@@ -4,11 +4,7 @@ from langchain.schema import Document
 from langchain_openai import ChatOpenAI
 from typing import List
 import os
-from dotenv import load_dotenv
-import streamlit as st
 
-load_dotenv()
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 DEFAULT_PROMPT = PromptTemplate.from_template(
     """Use the context below to answer the question. 
@@ -21,6 +17,7 @@ class QATool:
         self.llm = ChatOpenAI(
             model_name="gpt-4o",
             temperature=0,
+            openai_api_key=os.getenv("OPENAI_API_KEY")
         )
         self.qa_chain = RetrievalQA.from_chain_type(
             llm=self.llm,

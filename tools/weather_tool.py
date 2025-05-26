@@ -1,11 +1,12 @@
 import requests
 from langchain_openai import ChatOpenAI
+import os
 
 class WeatherTool:
     def __init__(self):
         self.geo_url = "https://geocoding-api.open-meteo.com/v1/search"
         self.weather_url = "https://api.open-meteo.com/v1/forecast"
-        self.llm = ChatOpenAI(model_name="gpt-4o", temperature=0.5)
+        self.llm = ChatOpenAI(model_name="gpt-4o", temperature=0.5,openai_api_key=os.getenv("OPENAI_API_KEY"))  # Set your OpenAI API key here
 
     def get_lat_lon(self, city: str):
         response = requests.get(self.geo_url, params={"name": city, "count": 1})

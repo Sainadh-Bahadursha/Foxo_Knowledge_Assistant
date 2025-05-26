@@ -2,6 +2,7 @@
 import streamlit as st
 from agent.foxo_agent import FOXOAgent
 from vectorstore.indexer import FAISSIndexer
+import os
 
 from PIL import Image
 
@@ -71,9 +72,22 @@ This assistant combines:
 
  Just type your question below and FOXO will automatically decide which tools to use to give you the most informed, context-aware response.
 
+⚠️ **To get started, please enter your API keys below.** Your keys will only be used for this session and never shared.
+            
 """
 
 )
+# Ask for API keys
+openai_key = st.text_input("🔐 Enter your OpenAI API Key", type="password", help="Required for answering questions using AI")
+tavily_key = st.text_input("🌐 Enter your Tavily API Key", type="password", help="Used for web searches")
+
+if not openai_key or not tavily_key:
+    st.warning("Please enter both OpenAI and Tavily API keys to continue.")
+    st.stop()
+
+# Save keys to environment
+os.environ["OPENAI_API_KEY"] = openai_key
+os.environ["TAVILY_API_KEY"] = tavily_key
 
 # Initialize agent and states
 if "foxo_agent" not in st.session_state:
