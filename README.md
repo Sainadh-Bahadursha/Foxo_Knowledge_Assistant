@@ -1,10 +1,9 @@
 ---
-## 🧠 FOXO Knowledge Assistant
+# 🧠 FOXO Knowledge Assistant
 
 An intelligent, LangChain-powered assistant that answers user questions across **nutrition, fitness, mental wellness, weather-aware food recommendations, personal health tracking**, and **life expectancy estimation** — using internal documents, custom tools, and external search.
 
 Built with:
-
 * **LangChain ReAct Agent**
 * **Streamlit Chat Interface**
 * **Custom tools** for weather, nutrition, life expectancy, Fitbit data analysis
